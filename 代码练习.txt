@@ -1,0 +1,2448 @@
+#define _CRT_SECURE_NO_WARNINGS 
+
+//#define _crt_secure_no_warnings  
+//#include<iostream>
+//int main() //函数头（function head）
+//{
+//	using namespace std;
+//	cout << "come up and c++ me some time.（过来和我一起学c++吧）";//输出信息；
+//	cout << endl;//开始新的一行；（不是1而是小写字母l)
+//	cout << "you won't regret it!（你不会后悔的）" << endl;//更多输出；
+//	cin.get();
+//	return 0;
+//} 
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;//std是C++标准库的命名空间（比如 cout 属于std::cout）。用这句话可以省略std::前缀，直接写std;
+//	int carrots; //声明一个整数变量；
+//	carrots = 25;//给这个变量分配权重；
+//	cout << carrots;//输出这个变量的权重；
+//	cout << "carrots.";//输“carrots”这个字符串；
+//	cout << endl;//换行；
+//	carrots = carrots - 1;//修改变量‘；
+//	cout << "Crunch, crunch.（咬胡萝卜发出的嘎吱声） Now I have " << carrots << "carrots." << endl;//"<<"可以连续拼接多个输出内容：字符串、变量、换行符
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int 胡萝卜;//声明一个整数变量；
+//	cout << "你有多少个胡萝卜?" << endl;//输出这串字符串；
+//	cin >> 胡萝卜;//输入一个数字；
+//	cout << "这里还多了两个。";
+//	胡萝卜 = 胡萝卜 + 2;//下一行接着输出；
+//	cout << "现在你有" << 胡萝卜 << "个胡萝卜" << endl;
+//	cin.get();
+//	return 0;
+//	}
+
+//#include<iostream>
+//#include<cmath>
+//int main()
+//{
+//	using namespace std;
+//	double area;
+//	cout << "输入你家的占地面积（单位为平方米）：";
+//	cin >> area;
+//	double side;
+//	side = sqrt(area);
+//	cout << "姓名为张箫引的女士输入了她家的面积，"<<endl;
+//	cout << "她家相当于一个正方形，边长为" << side
+//		<< "米" << endl;
+//	cout << "真大！" << endl;
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>
+//void simon(int);//自定义函数声明；
+//int main()
+//{
+//	using namespace std;
+//	simon(3);//调用simon()函数，参数为3；（告诉编译器存在一个名为simon得函数，接受一个int参数，无返回值）
+//	cout << "输入一个整数:";
+//	int count;
+//	cin >> count;//用户输入一个整数；
+//	simon(count);//再次调用simon()函数，参数为变量count;
+//	cout << "完成！" << endl;
+//	cin.get();
+//	return 0;
+//}
+//void simon(int n) //定义simon（）函数
+//{
+//	using namespace std;
+//	cout << "西蒙说摸了你领带" << n << "次。" << endl;
+//	//viod函数不需要返回语句（return 语句）
+//}
+
+////把“using namespace std;”放在所有函数的外面，让文件中所有函数都能够访问名称空间std。
+//#include<iostream>
+//using namespace std;//定义全局；
+//void simon(int);
+//int main()
+//{
+//	simon(3);
+//	cout << "输入一个整数:";
+//	int count;//定义一个整型变量；
+//	cin >> count;
+//	simon(count);
+//	cout << " 完成！" << endl;
+//	cin.get();
+//	return 0;
+//}
+//void simon(int n)
+//{
+//	cout << "西蒙说摸了你的领带" << n << "次" << endl;
+//}
+
+//#include<iostream>
+//int stonetolb(int);//"stonetolb"翻译为"英石"；
+//int main()
+//{
+//	using namespace std;
+//	int 英石;
+//	cout << "输入石头重多少英石:";
+//	cin >> 英石;
+//	int 英镑 = stonetolb(英石);
+//	cout << 英石 << "英石=";
+//	cout << 英镑 << "英镑" << endl;
+//	cin.get();
+//	return 0;
+//}
+//int stonetolb(int sts)
+//{
+//	return 14 * sts;//将转换值返回到main()函数中
+//}
+
+//22号
+
+//#include<iostream>
+//#include<climits>
+//int main()
+//{
+//	using namespace std;
+//	int 整型 =INT_MAX;
+//	short 短整型 = SHRT_MAX;
+//	long 长整型 = LONG_MAX;
+//	long long 长长整型 = LLONG_MAX;
+//
+//	cout << "整型占" << sizeof(int) << "字节。" << endl;
+//	cout << "短整型占" << sizeof 短整型 << "字节。" << endl;
+//	cout << "长整型占" << sizeof 长整型 << "字节。" << endl;
+//	cout << "长长整型占" << sizeof 长长整型 << "字节。" << endl;
+//	cout << endl;
+//
+//	cout << "各个类型的最大值:" << endl;
+//	cout << "整型:" << 整型 << endl;
+//	cout << "短整型:" << 短整型 << endl;
+//	cout << "长整型:" << 长整型 << endl;
+//	cout << "长长整型:" << 长长整型 << endl;
+//	
+//	cout << "最小整数=" << INT_MIN << endl;
+//	cout << "一个大B占" << CHAR_BIT <<"字节（bit）。"<< endl;
+//	cin.get();
+//	return 0;
+//}
+
+//超出数值范围的错误类型
+//#include<iostream>
+//#define ZERO 0 //定义全局的ZERO都为0；
+//#include<climits>
+//int main()
+//{
+//	using namespace std;
+//	short 山姆 = SHRT_MAX;
+//	unsigned short 苏一 = 山姆;
+//	
+//	cout << "山姆有" << 山姆 << "美元，并且苏一有" << 苏一;
+//	cout << "美元储蓄。" << endl
+//		<< "每个账户增加1美元" << endl << "现在";
+//	山姆 = 山姆 + 1;
+//	苏一 = 苏一 + 1;
+//	cout << "山姆有" << 山姆 << "美元，并且苏一有" << 苏一;
+//	cout << "美元储蓄.\n山姆真穷!" << endl;
+//	山姆 = ZERO;
+//	苏一 = ZERO;
+//	cout << "山姆有" << 山姆 << "美元，并且苏一有" << 苏一;
+//	cout << "美元储蓄。" << endl;
+//	cout << "从每个账户抽出1美元。" << endl << "现在";
+//	山姆 = 山姆 - 1;
+//	苏一 = 苏一 - 1;
+//	cout << "山姆有" << 山姆 << "美元，并且苏一有" << 苏一;
+//	cout << "美元储蓄" << endl << "苏一真幸运！" << endl;
+//	cin.get();
+//	return 0;
+//}
+
+////进制转换
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int 胸围 = 42;
+//	int 腰围 = 0x42;
+//	int 臀围 = 042;
+//	
+//	cout << "这个人的数值真夸张!\n";
+//	cout << "胸围是：" << 胸围 << "(42位小数)\n";
+//	cout << "腰围是：" << 腰围 << "（十六进制Ox42）\n";
+//	cout << "臀围是：" << 臀围 << "（八进制O42）\n";
+//	cin.get();
+//	return 0;
+//}
+
+////让代码发出声音
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout << "\a操作\"HyperHype\"现已启动！\n";
+//	cout << "请输入你的代码:_____________\b\b\b\b\b\b\b\b\b";
+//	long code;
+//	cin >> code;
+//	cout << "\a你输入了" << code << "...\n";
+//	cout << "\a代码验证通过！继续执行计划Z3!\n";
+//	cin.get();
+//	return 0;
+//}
+
+//23号
+
+////除法
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout.setf(ios_base::fixed, ios_base::floatfield);
+//	cout << "整除:9/5=" << 9 / 5 << endl;
+//	cout << "浮点数除:9.0/5.0=";
+//	cout << 9.0 / 5.0 << endl;
+//	cout << "混合除:9.0/5=" << 9.0 / 5 << endl;
+//	cout << "双精度常数:1e7/9.0=";
+//	cout << 1.e7 / 9.0 << endl;
+//	cout << "浮点数常数:1e7f/9.0f=";
+//	cout << 1.e7f / 9.0f << endl;
+//	cin.get();
+//	return 0;
+//}
+ 
+//求模取余
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	const int 磅每英石 = 14;
+//	int 磅;
+//
+//	cout << "输入你体重多少磅:";
+//	cin >> 磅;
+//	int 英石 = 磅 / 磅每英石;
+//	int 余下磅数 = 磅 % 磅每英石;
+//	cout << 磅 << "磅是:" << 英石
+//		<< "英石,"<< 余下磅数 << "是余下磅数.\n";
+//	cin.get();
+//	return 0;
+//}4
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout.setf(ios_base::fixed, ios_base::floatfield);
+//	float tree = 3;
+//	int guess= 3.9832;
+//	int debt = 7.2e12;
+//	cout << "树木=" << tree << endl;
+//	cout << "顾客=" << guess << endl;
+//	cout << "欠债=" << debt << endl;
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>  // 引入标准输入输出流库
+//int main()  // 主函数，程序入口
+//{
+//    using namespace std;  // 使用标准命名空间
+//    int auks, bats, coots;  // 声明三个整型变量
+//
+//    auks = 19.99 + 11.99;  // 将两个浮点数相加后赋值给auks
+//    bats = (int)19.99 + (int)11.99;  // 使用C风格强制类型转换，先将19.99和11.99分别转换为整型（19和11），再相加得到30。
+//    coots = int(19.99) + int(11.99);  // 使用函数风格强制类型转换，效果与bats相同，结果也是30
+//    //关键区别：auks是先相加再转换，而bats和coots是先转换再相加，导致结果不同（31 vs 30
+//    cout << "auks=" << auks << ",bats=" << bats;  // 输出auks和bats的值
+//    cout << ",coots=" << coots << endl;  // 输出coots的值并换行
+//
+//    char ch = 'z';  // 声明字符变量并赋值为'z'
+//    cout << "字母" << ch << "的ASCLL编码是";  // 输出提示信息
+//    cout << int(ch) << endl;  // 使用C风格转换将字符'z'转换为整型，输出其ASCII码值122。
+//    cout << "这个字母的ASCLL编码是:";  // 输出提示信息
+//    cout << static_cast<int>(ch) << endl;  // 使用C++风格转换并输出ASCII码
+//    cin.get();  // 等待用户输入一个字符
+//
+//    return 0;  // 程序正常结束
+//}
+
+////定义数组
+//#include<iostream>  // 引入标准输入输出流库
+//int main()  // 主函数，程序入口
+//{
+//    using namespace std;  // 使用标准命名空间
+//    int yams[3];  // 创建一个包含三个元素的整型数组
+//    // 给数组中各个元素分配数值
+//    yams[0] = 7;  // 第一个元素赋值为7
+//    yams[1] = 8;  // 第二个元素赋值为8
+//    yams[2] = 6;  // 第三个元素赋值为6
+//
+//    int yamcosts[3] = { 20, 30, 5 };  // 创建并初始化价格数组
+//    cout << "Total yams=";  // 输出提示信息
+//    cout << yams[0] + yams[1] + yams[2] << endl;  // 计算并输出山药总数
+//    cout << "The package with" << yams[1] << "yams costs";  // 输出提示信息
+//    cout << yamcosts[1] << "cents per yam.\n";  // 输出每颗山药的价格
+//    int total = yams[0] * yamcosts[0] + yams[1] * yamcosts[1];  // 计算总费用（有误）
+//    total = total + yams[2] * yamcosts[2];  // 修正总费用计算
+//    cout << "The total yam expends is" << total << "cents.\n";  // 输出总费用
+//
+//    cout << "\nSize of yams array=" << sizeof yams;  // 输出数组大小
+//    cout << "bytes.\n";
+//    cout << "Size of one element=" << sizeof yams[0];  // 输出单个元素大小
+//    cout << "bytes.\n";
+//
+//    cin.get();  // 等待用户输入一个字符
+//    return 0;  // 程序正常结束
+//} 
+
+//#include<iostream>  // 引入标准输入输出流库，用于支持cout和cin等输入输出操作
+//#include<cstring>  // 引入C字符串处理函数库，提供strlen等字符串操作函数
+//
+//int main()  // 主函数，程序执行的起点
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次使用标准库组件时都要加std::前缀
+//    const int Size = 15;  // 定义常量Size为15，表示字符数组的大小
+//    char name1[Size];  // 定义字符数组name1，用于存储用户输入的名字，大小为15字节
+//    char name2[Size] = "C++owboy";  // 定义并初始化字符数组name2，存储字符串"C++owboy"，大小为15字节
+//
+//    cout << "李华！我是:" << name2;  // 输出提示信息和name2的内容（C++owboy）
+//    cout << "！你叫什么?\n";  // 继续输出提示信息，询问用户的名字
+//    cin >> name1;  // 从标准输入读取用户的名字，存储到name1数组中
+//    cout << "emm，" << name1 << "你的名字有";  // 输出用户的输入名字，并提示名字的字母数
+//    cout << strlen(name1) << "字母，并且被储存\n";  // 计算并输出name1中字符串的长度（不包括空字符）
+//    cout << "在一个有" << sizeof(name1) << "字节的数组里";  // 输出name1数组的总大小（15字节）
+//    cout << "你的首字母是" << name1[0] << "。\n";  // 输出name1中第一个字符（用户名字的首字母）
+//    name2[3] = '\0';  // 将name2的第四个字符设置为空字符，截断字符串，只保留前三个字母
+//    cout << "这里是我名字的前三个字符";  // 输出提示信息
+//    cout << name2 << endl;  // 输出截断后的name2内容（C++）
+//
+//    cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭，便于查看输出结果
+//    return 0;  // 返回0，表示程序正常结束
+//}
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	const int ArSize = 20;
+//	char name[ArSize];
+//	char dessert[ArSize];
+//
+//	cout << "输入你的名字:\n";
+//	cin >> name;
+//	cout << "输入你喜欢的甜点:\n\b";
+//	cin >> dessert;
+//	cout << "我有些美味的" << dessert;
+//	cout << "给你吃，" << name << "，\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//对上一段代码的改进版本，次可以完整读取一行英文字母，而不会因为存在空格卡bug。
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	const int ArSize = 20;
+//	char name[ArSize];
+//	char dessert[ArSize];
+//
+//	cout << "输入你的名字:\n";
+//	cin.getline(name, ArSize);
+//	cout << "输入你喜欢的甜点:\n\b";
+//	cin.getline(dessert, ArSize);
+//	cout << "我有些美味的" << dessert;
+//	cout << "给你吃，" << name << "，\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+////4.7
+//#include<iostream>  // 引入标准输入输出流库，用于支持cout和cin等输入输出操作
+//#include<string>  // 引入C++标准字符串类库，提供string类型支持
+//
+//int main()  // 主函数，程序执行的起点
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次使用标准库组件时都要加std::前缀
+//    char charry1[20];  // 定义一个20字节的字符数组，用于存储C风格字符串（可容纳19个字符+1个空字符）
+//    char charry2[20] = "jaguar";  // 定义并初始化一个20字节的字符数组，存储字符串"jaguar"
+//    string str1;  // 定义一个C++字符串对象，初始为空
+//    string str2 = "panther";  // 定义并初始化一个C++字符串对象，存储字符串"panther"
+//
+//    cout << "输入一种猫科动物:" << endl << "\a";  // 输出提示信息并换行，同时发出警报声（\a）
+//    cin >> charry1;  // 从标准输入读取C风格字符串，存储到charry1数组中（遇到空格或换行停止）
+//    cout << "输入另外一种猫科动物:" << endl << "\a";  // 输出提示信息并换行，同时发出警报声
+//    cin >> str1;  // 从标准输入读取C++字符串，存储到str1对象中（遇到空格或换行停止）
+//    cout << "这里有些猫科动物:\n";  // 输出提示信息并换行
+//    cout << charry1 << "" << charry2 << ""  // 输出所有字符串，中间不加空格
+//        << str1 << "" << str2
+//        << endl;
+//    cout << "在" << charry2 << "的第三个字母是" << charry2[2] << endl;  // 输出charry2中索引为2的字符（即第三个字符'g'）
+//    cout << "在" << "str2" << "数组里第三个字母是:" << str2[2] << endl;  // 输出str2中索引为2的字符（即第三个字符'n'）
+//
+//    cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭，便于查看输出结果
+//    return 0;  // 返回0，表示程序正常结束
+//}
+
+//24号
+
+//#include<iostream>
+//#include<string>
+//#include<cstring>
+//int main()
+//{
+//	using namespace std;
+//	char charry1[20];
+//	char charry2[20] = "jaguar";
+//	string str1;
+//	string str2 = "panther";
+//
+//	str1 = str2;
+//	strcpy(charry1,charry2);
+//
+//	str1 += " paste";
+//	strcat(charry1, " juice");
+//
+//	int len1 = str1.size();
+//	int len2 = strlen(charry1);
+//
+//	cout << "The string" << str1 << "constans"
+//		<< len1 << "characters.\n\a";
+//	cout << "The string" << charry1 << "contans"
+//		<< len2 << "characters.\n\a";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream> // 引入标准输入输出流库
+//#include<string>   // 引入C++标准字符串类库
+//#include<cstring>  // 引入C风格字符串处理函数库（如strlen）
+//int main()
+//{
+//	using namespace std; // 使用标准命名空间，避免重复写std::
+//	char charr[20];      // 声明一个长度为20的字符数组（C风格字符串）
+//	string str;          // 声明一个空的C++ string对象// 输出charr在输入前的长度（由于未初始化，结果可能是随机值或0）
+//	
+//	cout << "Length of string in charr before input:" << strlen(charr) << endl;// 输出str在输入前的长度（空字符串长度为0）
+//	cout << "Length of string in str before input:" << str.size() << endl;// 提示用户输入第一行文本
+//	cout << "Enter a line of text:\n";// 读取一行文本到charr，最多19个字符（留一个给结束符\0）
+//	cin.getline(charr, 20);// 显示用户输入的内容
+//	cout << "You entered:" << charr << endl;// 提示用户输入第二行文本
+//	cout << "Enter another line of text:\n";// 读取一行文本到str（C++ string版本）
+//	getline(cin, str);// 显示用户输入的内容
+//	cout << "You entered:" << str << endl;// 显示输入后charr的长度
+//	cout << "Length of string in charr after input：" << strlen(charr) << endl;// 显示输入后str的长度，并发出响铃声(\a)
+//	cout << "Length of string in str after input:" << str.size() << endl << "\a";
+//
+//	cin.get(); // 暂停程序，等待用户按键（防止窗口关闭）
+//	return 0;  // 主函数返回0，表示程序正常结束
+//}
+
+//1月25日
+
+//#include<iostream>  // 引入输入输出流库，用于使用 cin、cout 等功能
+////创建结构体  // 注释：说明下面要创建一个结构体
+//struct inflatable  // 定义名为 inflatable 的结构体
+//{
+//    char name[20];  // 结构体成员：字符数组 name，最多存放 20 个字符
+//    float volume;  // 结构体成员：浮点数 volume，表示体积
+//    double price;  // 结构体成员：双精度浮点数 price，表示价格
+//};
+//
+//int main()  // 主函数入口
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次写 std::
+//
+//    inflatable guest =  // 创建结构体变量 guest 并初始化
+//    {
+//    "Glorious Gloria",  // 成员 name 初始化为 "Glorious Gloria"
+//    1.88,  // 成员 volume 初始化为 1.88
+//    29.99  // 成员 price 初始化为 29.99
+//    };
+//
+//    inflatable pal =  // 创建结构体变量 pal 并初始化
+//    {
+//    "Audacious Arthur",  // 成员 name 初始化为 "Audacious Arthur"
+//    3.12,  // 成员 volume 初始化为 3.12
+//    32.99,  // 成员 price 初始化为 32.99
+//    };  // 注意：最后一个逗号是允许的，C++ 允许初始化列表末尾有逗号
+//
+//    cout << "Expand your guest list with " << guest.name;  // 输出字符串和 guest 的 name 成员
+//    cout << " and " << pal.name << "!\n\a";  // 输出 pal 的 name 成员，并换行加响铃
+//
+//    cout << "You can have both for  $ ";  // 输出提示字符串
+//    cout << guest.price + pal.price << "!\n";  // 输出两个 price 成员的总和，并换行
+//
+//    cin.get();  // 等待用户按回车键，防止控制台窗口立即关闭
+//    return 0;  // 返回 0，表示程序正常结束
+//}
+
+////结构体赋给另一个结构体
+//#include<iostream>
+//struct inflatable
+//{
+//	char name[20];
+//	float volume;
+//	double price;
+//};
+//int main()
+//{
+//	using namespace std;
+//
+//	inflatable bouquet =
+//	{
+//	"sunflowers",
+//	 0.20,
+//	 12.49,
+//	};
+//
+//	inflatable choice;
+//	cout << "bouquet: " << bouquet.name << " for $";
+//	cout << bouquet.price << endl<< "\a";
+//
+//	choice = bouquet;
+//	cout << "choice: " << choice.name << " for $";
+//	cout << choice.price << endl;
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//
+//	double* p3 = new double [3];
+//	p3[0] = 0.2;
+//	p3[1] = 0.5;
+//	p3[2] = 0.8;
+//	cout << "p3[1] is " << p3[1] << ".\n\a";
+//	p3 = p3 + 1;
+//	cout << "Now p3[0] is " << p3[0] << " and";
+//	cout << "p3[1] is " << p3[1] << ".\n\a";
+//	p3 = p3 - 1;
+//	delete[] p3;
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include <iostream>  // 引入标准输入输出流库
+//int main() {
+//    using namespace std;  // 使用标准命名空间，避免每次写 std::
+//
+//    // 定义一个包含3个 double 类型工资的数组
+//    double wages[3] = { 10000.0, 20000.0, 30000.0 };
+//    // 定义一个包含3个 short 类型堆栈值的数组
+//    short stacks[3] = { 3, 2, 1 };
+//
+//    // 声明 double 类型指针 pw，并指向 wages 数组的首地址
+//    double* pw = wages;
+//    // 声明 short 类型指针 ps，并指向 stacks 数组的首地址
+//    short* ps = &stacks[0];
+//
+//    // 输出 pw 指针地址及其解引用的值（即 wages[0]）
+//    cout << "pw=" << pw << ", *pw=" << *pw << endl;
+//    // 指针 pw 向后移动 1 个单位（即指向 wages[1]）
+//    pw = pw + 1;
+//    cout << "add 1 to the pw pointer:\n\a";  // 提示指针加 1
+//    // 再次输出 pw 指针地址及其解引用的值（即 wages[1]）
+//    cout << "pw=" << pw << ", *pw=" << *pw << endl;
+//
+//    // 输出 ps 指针地址及其解引用的值（即 stacks[0]）
+//    cout << "ps=" << ps << ", *ps=" << *ps << endl;
+//    // 指针 ps 向后移动 1 个单位（即指向 stacks[1]）
+//    ps = ps + 1;
+//    cout << "add 1 to the ps pointer:\n";  // 提示指针加 1
+//    // 再次输出 ps 指针地址及其解引用的值（即 stacks[1]）
+//    cout << "ps= " << ps << ", *ps= " << *ps << "\n\n";
+//
+//    // 使用数组下标访问 stacks[0] 和 stacks[1]
+//    cout << "access two elements with array notation\n";
+//    cout << "stacks[0]= " << stacks[0]
+//        << ", stacks[1]=" << stacks[1] << endl;
+//
+//    // 使用指针解引用访问 stacks[0] 和 stacks[1]
+//    cout << "access two elements with pointer notation\n";
+//    cout << "*stacks = " << *stacks
+//        << ", *(stacks+1)= " << *(stacks + 1) << endl;
+//
+//    // 输出 wages 数组的总大小（单位：字节）
+//    cout << sizeof(wages) << " = size of wages array\n";
+//    // 输出指针 pw 的大小（单位：字节）
+//    cout << sizeof(pw) << " = size of pw pointer\n";
+//
+//    cin.get();  // 等待用户输入，防止控制台窗口关闭
+//    return 0;   // 程序正常结束
+//}
+
+//1月26日
+
+//#include<iostream>
+//struct inflatable
+//{
+//	char name[20];
+//	float volume;
+//	double price;
+//};
+//int main()
+//{
+//	using namespace std;
+//	inflatable* ps = new inflatable;
+//	cout << "用英文输入“inflatable”项目名称: "<<"\a";
+//	cin.get(ps->name,20);
+//	cout << "用立方英尺这个单位上输入体积: "<<"\a";
+//	cin >> (*ps).volume;
+//	cout << "输入价格(rmb): "<<"\a";
+//	cin >> ps->price;
+//	cout << "名字: " << (*ps).name << endl << "\a";
+//	cout << "体积: " << ps->volume << " 立方英尺\n";
+//	cout << "价格: " << ps->price << "元"<<endl;
+//	delete ps;
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<cstring>
+//using namespace std;
+//char* getname(void);
+//int main()
+//{
+//	char* name;
+//
+//	name = getname();
+//	cout << name << " 在 " << (int*)name << "\a\n";
+//	delete[] name;
+//	 
+//	name = getname();
+//	cout << name << " 在 " << (int*)name << "\a\n";
+//	delete[]name;
+//	
+//	cin.get();
+//	return 0;
+//}
+//char* getname()
+//{
+//	char temp[80];
+//	cout << "输入最后的名字: "<<"\a";
+//	cin >> temp;
+//	char* pn = new char[strlen(temp) + 1];//存储字符串，包括空字符。
+//	strcpy(pn, temp);//把temp里面存的字符串复制到pn中
+//
+//	return pn;
+//}
+
+//#include<iostream>
+//struct antarctica_years_end
+//{
+//	int year;
+//};
+//
+//int main()
+//{
+//	using namespace std;
+//	antarctica_years_end s01, s02, s03; 
+//	s01.year = 1998;
+//	antarctica_years_end* pa = &s02;
+//	pa->year = 1999;
+//	antarctica_years_end trio[3];//创建结构体数组；
+//	trio[0].year = 2003;
+//	cout << trio->year << endl;
+//	const 	antarctica_years_end* arp[3] = { &s01,&s02,&s03 };
+//	cout << arp[1]->year << endl;
+//	const antarctica_years_end** ppa = arp;
+//	auto ppb = arp;
+//
+//	cout << (*ppa)->year << endl;
+//	cout << (*(ppb + 1))->year << endl;
+//
+//	cin.get();
+//	return 0;
+//}
+
+//2月1号
+
+//#include<iostream>
+//#include<vector>
+//#include<array>
+//int main()
+//{
+//	using namespace std;
+//
+//	double a1[4] = { 1.2,2.4,3.6,4.8 };
+//	vector<double> a2(4);
+//
+//	a2[0] = 1.0 / 3.0;
+//	a2[1] = 1.0 / 5.0;
+//	a2[2] = 1.0 / 7.0;
+//	a2[3] = 1.0 / 9.0;
+//
+//	array<double, 4>a3 = { 3.14,2.72,1.62,1.41 };
+//	array<double, 4>a4;
+//	a4 = a3;
+//
+//	cout << "a1[2]:" << a1[2] << "在: " << &a1[2] << endl;
+//	cout << "a2[2]:" << a2[2] << "在: " << &a2[2] << endl;
+//	cout << "a3[2]:" << a3[2] << "在: " << &a3[2] << endl;
+//	cout << "a4[2]:" << a4[2] << "在: " << &a4[2] << endl;
+//
+//	a1[-2] = 20.2;
+//	cout << "a1[-2]:" << a1[-2] << " 在: " << &a1[-2] << endl;
+//	cout << "a3[2]:" << a3[2] << "在: " << &a3[2] << endl;
+//	cout << "a4[2]:" << a4[2] << "在: " << &a4[2] <<"\a"<< endl;
+//
+//	cin.get();
+//	return 0;
+//}
+
+////for循环
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int i;
+//
+//	for (i = 0; i<=5; i++)
+//		cout << "C++知道循环\n\a";
+//		cout << "C++知道什么时候停止。\n";
+//
+//		cin.get();
+//		return 0;
+//}  b by6hy 
+
+////用for循环自制的倒计时。
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout << "输入开始倒计时的数值: "<<"\a";
+//	int limit;
+//	cin >> limit;
+//	int i;
+//	for (i = limit; i; i--)//当i等于0时退出循环；
+//		cout << "i= " << i << "\n\a";
+//	cout << "已完成循环，现在的i等于: " << i << "\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>  // 引入输入输出流库，用于使用cout、cin等功能
+//int main()  // 主函数入口
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次写std::
+//    int x;  // 定义整型变量x，未初始化
+//
+//    cout << "the expression x=100 has the value ";  // 输出提示信息
+//    cout << (x = 100) << endl;  // 赋值表达式：将100赋给x，并输出结果值100，然后换行
+//    cout << "now x = " << x << endl;  // 输出当前x的值（此时为100）
+//    cout << "the expression x<3 has the value ";  // 输出提示信息
+//    cout << (x < 3) << endl;  // 比较表达式：判断x是否小于3，输出0（false）
+//    cout << "the expression x>3 has the value ";  // 输出提示信息
+//    cout << (x > 3) << endl;  // 比较表达式：判断x是否大于3，输出1（true）
+//    cout.setf(ios_base::boolalpha);  // 设置输出格式：布尔值输出为true/false，而非0/1
+//    cout << "the exoression x<3 has the value ";  // 输出提示信息（注意拼写错误）
+//    cout << (x < 3) << endl;  // 再次判断x<3，此时输出false
+//    cout << "the expression x>3 has the value " << "\a";  // 输出提示信息并发出响铃声
+//    cout << (x > 3) << endl;  // 再次判断x>3，此时输出true
+//
+//    cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭
+//    return 0;  // 主函数返回0，表示程序正常结束
+//}
+
+//#include<iostream>  // 引入输入输出流库，提供标准输入输出功能
+//const int arsize = 16;  // 定义常量arsize为16，用于指定数组大小
+//
+//int main()  // 主函数入口
+//{
+//    long long factorials[arsize];  // 声明一个long long类型的数组，用于存储阶乘结果
+//    factorials[1] = factorials[0] = 1ll;  // 初始化数组：0!和1!的值均为1
+//    for (int i = 2; i < arsize; i++)  // 从2开始循环计算阶乘
+//        factorials[i] = i * factorials[i - 1];  // 使用递推公式计算当前数的阶乘
+//    for (int i = 0; i < arsize; i++)  // 循环输出所有阶乘值
+//        std::cout << i << "!= " << factorials[i] << std::endl<<"\a";  // 输出格式：数字!=阶乘值
+//
+//    std::cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭
+//    return 0;  // 主函数返回0，表示程序执行成功
+//}
+
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout << "输入一个整数: " << "\a";
+//	int by;
+//	cin >> by;
+//	cout << "计by的数 " << by << "s:\n\a";
+//	for (int i = 0; i < 100; i = i + by)
+//		cout << i << endl;
+//
+//	cin.get();
+//	return 0;
+//}
+
+//让单词倒过来输出。
+//#include<iostream>
+//#include<string>
+//int main()
+//{
+//	using namespace std;
+//	cout << "输入一个单词: "<<"\a";
+//	string word;
+//	cin >> word;
+//
+//	for (int i = word.size() - 1; i >= 0; i--)
+//		cout << word[i]<<"\a";
+//	cout << "\n再见。\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+////自增自减运算符
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int a = 20;
+//	int b = 20;
+//	cout << "a= " << a << ": b= " << b << "\n";
+//	cout << "a++ = " << a++ << ": ++b= " << ++b << "\n";
+//	cout << "a= " << a << ": b= " << b << "\n\a";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//#include<iostream>  // 引入输入输出流库
+//int main()  // 主函数入口
+//{
+//    using namespace std;  // 使用标准命名空间
+//    cout << "神奇的计算器将为您计算";  // 输出功能说明
+//    cout << "五个数字的总和与平均值。\n";  // 输出功能说明
+//    cout << "请输入五个数值:\n" << "\a";  // 提示用户输入并发出提示音
+//    double number;  // 声明用于存储输入数字的变量
+//    double sum = 0.0;  // 声明并初始化总和变量
+//    for (int i = 1; i <= 5; i++)  // 循环5次，获取5个数字
+//    {
+//        cout << "数值 " << i << ": ";  // 提示输入第i个数值
+//        cin >> number;  // 读取用户输入的数字
+//        sum += number;  // 将输入数字累加到总和中
+//    }
+//    cout << "五个精妙的选择!";  // 输出确认信息
+//    cout << "它们的总和是:" << sum << endl;
+//    cout << "它们的平均值是:" << sum / 5 << ".\n";  // 计算并输出平均值
+//    cout << "神奇的计算器向您道别！\n" << "\a";  // 输出结束信息并发出提示音
+//
+//    cin.get();  // 等待用户按键，防止窗口关闭
+//    return 0;  // 主函数返回0，表示程序正常结束
+//}
+
+////字符顺序反转
+//#include<iostream>
+//#include<string>
+//int main()
+//{
+//	using namespace std;
+//	cout << "输入一个单词: "<<"\a";
+//	string word;
+//	cin >> word;
+//
+//	char temp;
+//	int i, j;
+//	for (j = 0, i = word.size() - 1; j < i; --i, ++j)
+//	{
+//		temp = word[i];
+//		word[i] = word[j];
+//		word[j] = temp;
+//	}
+//	cout << word << "\n程序运行结束\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+////比较字符串
+//#include <iostream>  // 引入输入输出流库，用于使用 cin 和 cout
+//#include <cstring>   // 引入 C 字符串处理库，用于 strcmp 函数
+//
+//int main()
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次写 std::
+//
+//    char word[5] = "?ate";  // 定义一个长度为 5 的字符数组，初始化为 "?ate"（末尾自动补 '\0'）
+//
+//    // 循环：从字符 'a' 开始，逐个递增，直到 word 等于 "mate" 为止
+//    for (char ch = 'a'; strcmp(word, "mate"); ch++)
+//    {
+//        cout << word << endl;  // 输出当前 word 的内容
+//        word[0] = ch;           // 将 word 的第一个字符替换为当前的 ch
+//    }
+//
+//    cout << "After loop ends, word is " << word << endl;  // 循环结束后输出最终的 word
+//
+//    cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭
+//    return 0;   // 返回 0，表示程序正常结束
+//}
+
+//#include <iostream>  // 引入输入输出流库，用于使用 cin 和 cout
+//#include <string>   // 引入 C 字符串处理库，用于 strcmp 函数
+//
+//int main()
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次写 std::
+//
+//    string word = "?ate";  // 定义一个长度为 5 的字符数组，初始化为 "?ate"（末尾自动补 '\0'）
+//
+//    // 循环：从字符 'a' 开始，逐个递增，直到 word 等于 "mate" 为止
+//    for (char ch ='a'; word!= "mate"; ch++)
+//    {
+//        cout << word << endl;  // 输出当前 word 的内容
+//        word[0] = ch;           // 将 word 的第一个字符替换为当前的 ch
+//    }
+//
+//    cout << "After loop ends, word is " << word << endl<<"\a";  // 循环结束后输出最终的 word
+//
+//    cin.get();  // 等待用户输入一个字符，防止程序窗口立即关闭
+//    return 0;   // 返回 0，表示程序正常结束
+//}
+
+//2月2号
+
+//#include<iostream>  // 引入输入输出流库，用于cin和cout
+//const int arsize = 20;  // 定义常量数组大小为20
+//int main()  // 主函数入口
+//{
+//	using namespace std;  // 使用标准命名空间，避免每次写std::
+//	char name[arsize];  // 定义字符数组，用于存储用户输入的姓氏
+//	cout << "写下你的姓: " << "\a";  // 输出提示信息，并发出提示音
+//	cin >> name;  // 从标准输入读取用户输入的字符串到name数组
+//	cout << "here is your name,verticalized and ASCIIized:\n\a";  // 输出说明信息，表示将展示垂直化和ASCII码形式.
+//	int i = 0;  // 初始化循环计数器i为0
+//	while (name[i] != '\0')  // 循环直到遇到字符串结束符
+//	{
+//		cout << name[i] << ": " << int(name[i]) << endl;  // 输出当前字符及其对应的ASCII码值	int(name[i]) 强制字母转换为ASCII码。
+//		i++;  // 移动到下一个字符
+//	}
+//
+//	cin.get();  // 等待用户按键，防止程序立即关闭
+//	return 0;  // 返回0，表示程序正常结束
+//}
+
+//创建延迟循环功能。
+//#include<iostream>  // 引入输入输出流库，用于cin和cout
+//#include<ctime>     // 引入时间库，提供clock()函数用于计时
+//int main()
+//{
+//	using namespace std;  // 使用标准命名空间，避免每次写std::
+//
+//	cout << "输入延迟时间（单位是s）: " << "\a";  // 提示用户输入延迟时间，并发出提示音
+//	float sec;  // 声明浮点数变量，用于存储用户输入的秒数
+//	cin >> sec;  // 读取用户输入的延迟时间（秒）
+//
+//	// 将秒数转换为时钟周期数（CLOCKS_PER_SEC是每秒的时钟周期数）
+//	clock_t delay = sec * CLOCKS_PER_SEC;
+//
+//	cout << "开始\a\n";  // 输出开始提示，并发出提示音
+//	// 输出倒计时信息，显示用户设置的延迟时间
+//	cout << "自动倒数中，请稍等" << sec << "秒" << endl;
+//
+//	clock_t start = clock();  // 获取当前时钟时间，作为计时起点
+//
+//	// 等待循环：持续检查当前时间与起始时间的差值，直到达到设定的延迟时间
+//	while (clock() - start < delay);
+//
+//	cout << "已完成\a\n";  // 倒计时结束，输出完成提示
+//
+//	cin.get();  // 等待用户按键，防止程序立即关闭
+//	return 0;  // 返回0，表示程序正常结束
+//}
+
+//do while循环
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int n;
+//
+//	cout << "输入1到10的数字，去找到我喜欢的: "<<"\a";
+//	do
+//	{
+//		cin >> n;
+//		if (n != 7)
+//		{
+//			cout << n << "不是我喜欢的数字！" << endl;
+//			cout << "请重新输入: " << "\a\n";
+//		}
+//	} while (n != 7);
+//	cout << "是的，7是我喜欢的数字！\a\n";
+//	cout << "代码运行结束，请随意按键退出。";
+//
+//	cin.get();
+//	return 0;
+//}
+
+////读取字符并计算字符数量。
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	char ch;
+//	int count = 0;
+//	cout << "输入字符；输入'#'表示停止:\a\n";
+//	cin >> ch;
+//	while (ch != '#')
+//	{
+//		cout << ch;
+//		++count;
+//		cin >> ch;
+//	}
+//	cout << endl << count << "个字符被读入\a\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//5.17
+// #include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	char ch;
+//	int count = 0;
+//
+//	cout << "输入字符；输入'#'表示停止:\a\n";
+//	cin.get(ch);
+//	while (ch != '#')
+//	{
+//		cout << ch;
+//		++count;
+//		cin.get(ch);
+//	}
+//	cout << endl << count << "个字符被读入\a\n";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//5.18
+//#include<iostream>  // 引入输入输出流库，用于cin和cout
+//int main()  // 主函数入口
+//{
+//	using namespace std;  // 使用标准命名空间，避免每次写std::
+//	char ch;  // 声明字符变量，用于存储每次读取的字符
+//	int count = 0;  // 初始化计数器为0，用于统计读取的字符数量
+//	cin.get(ch);  // 从标准输入读取一个字符，存储到ch变量中
+//	while (cin.fail() == false)  // 当输入操作没有失败时继续循环
+//	{
+//		cout << ch;  // 输出当前读取的字符
+//		++count;  // 递增计数器，统计已读取的字符数量
+//		cin.get(ch);  // 再次从标准输入读取一个字符
+//	}
+//	cout << endl << count << "个字符被读入\a\n";  // 输出换行符、字符总数，并发出提示音
+//
+//	cin.get();  // 等待用户按键，防止程序立即关闭
+//	return 0;  // 返回0，表示程序正常结束
+//} /*使用步骤
+//运行程序后，请按照以下步骤操作：
+//输入内容：
+//程序会提示你输入（虽然没有文字提示，但光标在闪烁）。
+//你可以输入任意内容，比如：Hello World!，然后按回车。
+//你可以继续输入多行内容。
+//关键点：这个程序不会因为你按了回车就停止。它会一直读取，直到你输入“文件结束”符。
+//发送“文件结束”信号（结束输入的关键）：
+//当你输入完所有想要统计的内容后，需要告诉程序“输入结束了”。
+//Windows系统：按下 Ctrl + Z，然后按回车。
+//Mac / Linux系统：按下 Ctrl + D。
+//查看结果：
+//程序会先把你刚才输入的所有内容原样打印出来（包括换行格式）。
+//然后换行，显示总共读取了多少个字符，并发出提示音。*/
+
+////5.19
+//#include<iostream>  // 包含标准输入输出流库，提供cin、cout和get/put等函数支持
+//int main()  // 程序执行的入口点
+//{
+//	using namespace std;  // 引入std命名空间，简化标准库对象的调用
+//
+//	int ch;  // 定义整型变量存储字符（使用int而非char以兼容EOF值）
+//	int count = 0;  // 初始化字符计数器为0
+//
+//	// 循环读取字符：将cin.get()的返回值赋给ch，并判断是否为文件结束符
+//	while ((ch = cin.get()) != EOF)
+/*第 10 行：while ((ch = cin.get()) != EOF)
+//这行代码的作用是循环读取输入，直到遇到“文件结束”标志。
+//cin.get()：
+//这是一个输入函数，它会从键盘缓冲区（或输入流）中读取下一个字符。
+//与 cin >> 不同，cin.get() 可以读取任何字符，包括空格、制表符和换行符。
+//ch = cin.get()：
+//这里使用了赋值表达式。程序先执行 cin.get() 读取一个字符，然后把这个字符的值赋给变量 ch。
+//注意：ch 被定义为 int 类型（而不是 char），这是因为 cin.get() 在读取失败或到达文件末尾时会返回一个特殊值 EOF（End Of File），int 类型才能正确存储这个特殊标记。
+//!= EOF：
+//EOF 是一个宏，代表“文件结束”。在 Windows 系统中通常通过 Ctrl+Z 触发，在 Mac/Linux 中通过 Ctrl+D 触发。
+//这个条件判断读取到的字符是否是 EOF。如果不是 EOF，循环继续；如果是 EOF，循环停止*/
+//{
+//cout.put(char(ch));  
+//++count;  // 计数器递增（修正了原代码中的多余分号）
+/*cout.put()：
+//这是 cout 的一个成员函数，专门用于输出单个字符。
+//它的功能与 cout << ch 类似，但 put 是专门针对字符设计的。
+//char(ch)：
+//这是强制类型转换。
+//前面提到，变量 ch 是 int 类型（为了存储 EOF）。虽然它里面存的是字符的 ASCII 码值（比如 65 代表 'A'），但编译器目前把它看作一个整数。
+//char(ch) 的意思是：“请把 ch 里的数字暂时当作一个字符来看待”。
+//这样，cout.put() 就会输出对应的字符（如 'A'），而不是输出数字本身（如 65）*/
+//	}
+//
+//	// 输出统计结果：换行后显示总字符数，并触发终端提示音
+//	cout << endl << count << "个字符被读入\a\n";
+//
+//	cin.get();  // 暂停程序等待输入，防止窗口闪退
+//	return 0;  // 返回0表示程序正常终止
+//}
+
+//2月3号
+
+////二元数组
+//#include<iostream>  // 引入标准输入输出流库
+//const int cities = 5;  // 定义城市数量常量
+//const int years = 4;   // 定义年份跨度常量
+//
+//int main()
+//{
+//    using namespace std;  // 使用标准命名空间
+//
+//    // 定义城市名称数组（注意：此处有拼写错误，应为Forbidden、Great、Shaogong、Square、Shaolinsi）
+//    const char* Cities[cities] =
+//    {
+//        "Forbbiden city",   // 故宫
+//        "The Grear wall",    // 长城
+//        "Shao niangong",     //少年宫
+//        "Time square",   // 新年广场（实际应为Times Square）
+//        "Shao linsi",       // 少林寺
+//    };
+//
+//    // 定义二维数组存储2008-2011年各城市最大温度
+//    int maxtemps[years][cities] =
+//    {
+//        {96,100,87,101,105},  // 2008年数据
+//        {96,98,91,107,104},   // 2009年数据
+//        {97,101,93,108,107},  // 2010年数据
+//        {98,103,95,109,108},  // 2011年数据
+//    };
+//
+//    // 输出标题，\a为响铃字符
+//    cout << "从2008年到2011年的最大温度\a\n\n";
+//
+//    // 外层循环：遍历每个城市
+//    for (int city = 0; city < cities; ++city)
+//    {
+//        // 输出城市名称后加制表符
+//        cout << Cities[city] << ":\t";
+//
+//        // 内层循环：遍历每一年，输出对应温度
+//        for (int year = 0; year < years; ++year)
+//            cout << maxtemps[year][city] << "\t";  // 输出温度值
+//
+//        // 换行，准备输出下一个城市
+//        cout << endl;
+//    }
+//
+//    // 等待用户按键，防止控制台窗口关闭
+//    cin.get();
+//
+//    // 程序正常退出
+//    return 0;
+//}
+
+////6.1
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	char ch;
+//	int spaces = 0;
+//	int total = 0;
+//	cout << "请输入一段英文句子:\a\n";
+//	cin.get(ch);
+//	while (ch != '.')
+//	{
+//		if (ch == ' ')//空格占用一个字符。
+//			++spaces;
+//		++total;//（包括字符在内的）句子中的字符数量；
+//		cin.get(ch);
+//	}
+//
+//	cout <<"句子中有" << spaces << "个空格, " << "\a";
+//	cout << "句子（包括空格）总共有" << total << "个字符。";
+//
+//	cin.get();
+//	return 0;
+//}
+
+//6.2(制造混乱)
+//#include<iostream>  // 包含标准输入输出流库
+//int main()  // 主函数入口
+//{
+//    using namespace std;  // 使用标准命名空间
+//    char ch;  // 声明字符变量
+//
+//    cout << "请你打字，我将重复你打的字: \a\n";  // 其实它是输出a下一个字母b。
+//    cin.get(ch);  // 读取输入字符
+//    while (ch != '.')  // 循环直到遇到句点
+//    {
+//        if (ch == '\n')  // 判断是否为换行符
+//            cout << ch;  // 输出原字符
+//        else
+//            cout << ++ch;  // 输出字符的下一个ASCII字符
+//        cin.get(ch);  // 继续读取输入
+//    }
+//
+//    cout << "\n请原谅这小小的混乱。（doge）\n";  // 输出结束信息
+//
+//    cin.get();  // 等待用户按键
+//    return 0;  // 程序正常退出
+//}
+
+////6.3
+//#include<iostream>  // 包含标准输入输出流库
+//const int Fave = 27;  // 定义常量，存储程序喜欢的数字（答案）
+//int main()  // 主函数入口
+//{
+//    using namespace std;  // 使用标准命名空间
+//    int n;  // 声明变量用于存储用户输入的数字
+//
+//    cout << "请输入1到100以内的一个数字来猜我喜欢的: \a\n";  // 输出提示信息并发出提示音
+//
+//    do  // 开始循环，至少执行一次
+//    {
+//        cin >> n;  // 读取用户输入的数字
+//
+//        if (n < Fave)  // 如果输入数字小于答案
+//        {
+//            cout << "猜低了，往高的猜: ";  // 提示猜低了
+//            cout << "\a\n";  // 发出提示音
+//        }
+//        else if (n > Fave)  // 如果输入数字大于答案
+//        {
+//            cout << "猜高了，往低的猜: ";  // 提示猜高了
+//            cout << "\a\n";  // 发出提示音
+//        }
+//        else  // 如果输入数字等于答案
+//            cout << "你猜对了！就是" << Fave << " 。";  // 输出恭喜信息
+//        cout << "\a\n";  // **注意：这行代码存在逻辑错误，它不属于else块**
+//    } while (n != Fave);  // 当输入不等于答案时继续循环
+//
+//    cin.get();  // 等待用户按键，防止控制台窗口关闭
+//    return 0;  // 程序正常退出
+//}
+
+//6.4
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	cout << "这个项目也许会重新格式化你的硬件，\n"
+//		"并且会摧毁你所有的数据。\n"
+//		"你需要继续吗？<y/n>\a\n";
+//
+//	char ch;
+//	do
+//	{
+//		cin >> ch;
+//
+//		if (ch == 'y' || ch == 'Y')
+//		{
+//			cout << "你被警告了！\a\a\n";
+//			cout << "请再下面重新输入！\n";
+//		}
+//		else if (ch == 'n' || ch == 'N')
+//			cout << "是个明智的选择。\a\n";
+//		else
+//			cout << "请你输入大小写‘n’或‘y’"<<"\a\n";
+//	} while (ch != 'n' && ch != 'y');
+//	
+//	cin.get();
+//	return 0;
+//}
+
+////6.5
+//#include<iostream>
+//using namespace std; // 将命名空间声明提前，避免每行都写
+//
+//const int MAX_NEIGHBORS = 6; // 定义常量：最多录入6位邻居的数据
+//
+//int main()
+//{
+//    float wellnessQuotient[MAX_NEIGHBORS]; // 定义数组：存储邻居们的"养生段位"分数
+//
+//    cout << "请输入你邻居们的【养生段位】分数。\n"
+//        << "程序将在录入" << MAX_NEIGHBORS
+//        << "个数据后结束，\n或输入负数提前结束。\n" << endl;
+//
+//    int count = 0;        // 计数器：记录实际录入了多少人
+//    float inputScore;     // 临时变量：存储当前输入的分数
+//
+//    cout << "请输入第一位邻居的分数: ";
+//    cin >> inputScore;
+//
+//    // 循环录入：只要还没满6人 且 输入的分数不是负数，就继续
+//    while (count < MAX_NEIGHBORS && inputScore >= 0)
+//    {
+//        wellnessQuotient[count] = inputScore; // 存入数组
+//        count++; // 人数+1
+//
+//        // 如果还没满，继续提示输入
+//        if (count < MAX_NEIGHBORS)
+//        {
+//            cout << "请输入下一位邻居的分数: ";
+//            cin >> inputScore;
+//        }
+//    }
+//
+//    // 判断是否有数据
+//    if (count == 0)
+//    {
+//        cout << "你没有录入任何数据，程序结束。" << endl;
+//    }
+//    else
+//    {
+//        cout << "\n\n=== 数据录入完成 ===" << endl;
+//        cout << "请输入你的【个人养生段位】分数: ";
+//        float myScore;
+//        cin >> myScore;
+//
+//        int higherCount = 0; // 计数器：统计比你分数高的人数
+//
+//        // 遍历所有邻居的数据
+//        for (int i = 0; i < count; i++)
+//        {
+//            if (wellnessQuotient[i] > myScore)
+//            {
+//                higherCount++; // 如果邻居分数比你高，计数+1
+//            }
+//        }
+//
+//        // 输出最终结果
+//        cout << "\n---------------------------------" << endl;
+//        cout << "统计结果：" << endl;
+//        cout << "在你的 " << count << " 位邻居中，"
+//            << higherCount << " 位的养生觉悟比你高。" << endl;
+//        cout << "加油，打工人！" << endl;
+//    }
+//
+//    cin.get();
+//    cin.get(); // 多加一个防止窗口闪退
+//    return 0;
+//}
+
+////6.6
+//#include<iostream>
+//using namespace std; // 将命名空间声明提前
+//
+//// 定义活动资格数组
+//const char* activity[4] =
+//{
+//   "社区广场舞大赛。\n",
+//   "小区麻将段位赛。\n",
+//   "公园太极推手交流会。\n",
+//   "老年大学合唱团。\n"
+//};
+//
+//int main()
+//{
+//    int age; // 声明年龄变量
+//
+//    cout << "请输入您的年龄：\a"; // 提示输入
+//    cin >> age;
+//
+//    int index; // 声明索引变量
+//
+//    // 根据年龄判断适合的活动
+//    if (age > 17 && age < 35)
+//        index = 0; // 青年：广场舞
+//    else if (age >= 35 && age < 50)
+//        index = 1; // 中年：麻将
+//    else if (age >= 50 && age < 65) // 修正了逻辑：包含50岁
+//        index = 2; // 中老年：太极
+//    else
+//        index = 3; // 老年：合唱团
+//
+//    cout << "您符合参加" << activity[index]; // 输出结果
+//
+//    cin.get();
+//    return 0;
+//}
+
+////6.7
+//#include<iostream>
+//#include<climits> // 包含整数范围定义的头文件
+//
+//// 函数声明：判断输入的数字是否在整数的有效范围内
+//bool is_int(double);
+//
+//int main()
+//{
+//    using namespace std;
+//    double num; // 声明一个双精度浮点数变量，用于接收用户输入
+//
+//    // 输出提示信息，询问用户输入一个整数值
+//    cout << "嘿，老兄！请输入一个整数值: ";
+//    cin >> num;
+//
+//    // 循环判断：如果输入的数值不在整数范围内，则持续要求重新输入
+//    while (!is_int(num))
+//    {
+//        cout << "输入的数值超出范围，请重新输入: ";
+//        cin >> num;
+//    }
+//
+//    // 将合法的浮点数强制转换为整数
+//    int val = int(num);
+//
+//    // 输出确认信息，显示用户成功输入的整数
+//    cout << "你输入的整数是 " << val << "\n再见！\n";
+//
+//    cin.get();
+//    return 0;
+//}
+//
+//// 函数定义：判断输入的数字是否在整数的有效范围内
+//bool is_int(double x)
+//{
+//    // 判断条件：x 必须大于等于整数的最小值，且小于整数的最大值
+//    if (x < INT_MAX && x >= INT_MIN)
+//        return true;
+//    else
+//        return false;
+//}
+
+////6.8
+//#include<iostream>  // 引入标准输入输出流库
+//#include<cctype>    // 引入字符处理函数库（如 isalpha, isdigit 等）
+//
+//int main()
+//{
+//    using namespace std;  // 使用标准命名空间，避免每次写 std::
+//
+//    cout << "输入一短句子做测试，并且打出@表示结束输入";  // 提示用户输入
+//
+//    char ch;           // 定义字符变量，用于存储每次输入的字符
+//    int whitespace = 0;  // 初始化空格计数器
+//    int digits = 0;      // 初始化数字计数器
+//    int chars = 0;       // 初始化字母计数器
+//    int punct = 0;       // 初始化标点计数器（虽然代码中未统计标点）
+//    int others = 0;      // 初始化其他字符计数器
+//
+//    cin.get(ch);  // 读取第一个字符
+//
+//    while (ch != '@')  // 循环直到遇到 '@' 字符
+//    {
+//        if (isalpha(ch))  // 判断是否为字母
+//            chars++;       // 是则字母计数加1
+//        else if (isspace(ch))  // 判断是否为空格
+//            whitespace++;      // 是则空格计数加1
+//        else if (isdigit(ch))  // 判断是否为数字
+//            digits++;           // 是则数字计数加1
+//        else                    // 其他字符
+//            others++;           // 其他字符计数加1
+//
+//        cin.get();  // 读取下一个字符（但未赋值给 ch，导致逻辑错误）
+//        return 0;   // 提前返回，导致循环只执行一次（逻辑错误）
+//    }
+//
+//    // 以下代码不会执行，因为循环体内有 return 0
+//    cout << chars << " letters, "
+//        << whitespace << " whitespace, "
+//        << punct << " punctuations, "
+//        << others << " others.\n\a";
+//
+//    cin.get();  // 等待用户按键
+//    return 0;   // 程序正常结束
+//}
+
+////6.9(比大小)
+//#include<iostream>
+//int main()
+//{
+//	using namespace std;
+//	int a, b;
+//	cout << "Enter two integers: ";
+//	cin >> a >> b;
+//	cout << "The larger of " << a << " and " << b;
+//	int c = a > b ? a : b;
+//	cout << " is " << c << endl;
+//
+//	cin.get();
+//	return 0;
+//}
+
+////6.10
+//#include<iostream>
+//using namespace std;
+//
+//void showmenu();   // 显示菜单
+//void report();    // 生成报告
+//void comfort();   // 提供安慰
+//
+//int main()
+//{
+//    showmenu();   // 首次显示菜单
+//    int choice;
+//    cin >> choice;   // 读取用户选择
+//
+//    while (choice != 5)   // 5表示退出
+//    {
+//        switch (choice)
+//        {
+//        case 1:
+//            cout << "\a\n";   // 播放警报音
+//            break;
+//        case 2:
+//            report();   // 显示业务报告
+//            break;
+//        case 3:
+//            cout << "老板今天全天都在公司。\n";   // 提供不在场证明
+//            break;
+//        case 4:
+//            comfort();   // 提供安慰信息
+//            break;
+//        default:
+//            cout << "这不是一个有效的选项。\n";   // 错误输入提示
+//        }
+//        showmenu();   // 再次显示菜单
+//        cin >> choice;   // 读取下一次选择
+//    }
+//    cout << "再见！\n";   // 退出提示
+//
+//    cin.get();
+//    return 0;
+//}
+//
+//// 显示主菜单
+//void showmenu()
+//{
+//    cout << "请输入1、2、3、4或5：\n"
+//        << "1) 报警               2) 报告\n"
+//        << "3) 借口               4) 安慰\n"
+//        << "5) 退出\n";
+//}
+//
+//// 生成业务报告
+//void report()
+//{
+//    cout << "本周业务表现极为出色。\n"
+//        << "销售额增长120%，支出减少35%。\n";
+//}
+//
+//// 提供安慰信息
+//void comfort()
+//{
+//    cout << "您的员工认为您是行业内最优秀的CEO。\n"
+//        << "董事会也认为您是行业内最杰出的CEO。\n";
+//}
+
+////6.11
+//#include<iostream>
+//enum { 红, 橙, 黄, 绿, 蓝, 紫, 靛 };
+//
+//int main()
+//{
+//    using namespace std;
+//    cout << "输入颜色代码(0-6): ";
+//    int code;
+//    cin >> code;
+//    while (code >= 红 && code <= 靛)
+//    {
+//        switch (code)
+//        {
+//        case 红: cout << "她的嘴唇是红色的。\n"; break;
+//        case 橙: cout << "她的头发是橙色的。\n"; break;
+//        case 黄: cout << "她的鞋子是黄色的。\n"; break;
+//        case 绿: cout << "她的指甲是绿色的。\n"; break;
+//        case 蓝: cout << "她的运动服是蓝色的。\n"; break;
+//        case 紫: cout << "她的眼睛是紫色的。\n"; break;
+//        case 靛: cout << "她的心情是靛色的。\n"; break;
+//        }
+//        cout << "输入颜色代码(0-6): ";
+//        cin >> code;
+//    }
+//    cout << "再见\n";
+//    return 0;
+//}
+
+////6.12
+//#include<iostream>
+//const int arsize = 80;  // 定义文本行最大长度为80
+//
+//int main()
+//{
+//    using namespace std;
+//    char line[arsize];  // 声明字符数组用于存储输入文本
+//    int spaces = 0;      // 初始化空格计数器
+//
+//    cout << "输入一行文本：\a\n";  // 提示用户输入
+//    cin.get(line, arsize);         // 读取用户输入的文本
+//    cout << "完整文本：\n" << line << endl;  // 输出完整文本
+//    cout << "第一个句号前的文本：\n";  // 提示输出截断后的文本
+//    for (int i = 0; line[i] != '\0'; i++)  // 遍历文本直到结束符
+//    {
+//        cout << line[i];  // 输出当前字符
+//        if (line[i] == '.')  // 如果遇到句号
+//            break;           // 终止循环
+//        if (line[i] != ' ')   // 问：这个字符是不是“非空格”？
+//            continue;         // 答：是“非空格” -> 请直接跳到下一轮循环（不要执行下面的spaces++）   是“空格” -> 不要跳过，继续往下走
+//        spaces++;             // 4. 只有“跳过指令”没有被执行时（即字符是空格时），才会执行这行代码，计数器加1
+//    }
+//    cout << "\n" << spaces << " 个空格\n";  // 输出空格数量
+//    cout << "完成。\n";  // 提示程序结束
+//
+//    cin.get();  // 等待用户按键
+//    return 0;   // 程序正常结束
+//}
+
+////6.13
+//#include<iostream>
+//const int Max = 5;  // 定义最大鱼的数量为5
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    double fish[Max];  // 声明用于存储鱼重量的数组
+//    cout << "请输入鱼的重量(kg)。\n";
+//    cout << "最多可输入 " << Max
+//        << " 条鱼（输入q结束）。\n";
+//    cout << "第1条鱼: ";
+//    int i = 0;  // 初始化计数器
+//
+//    // 循环读取输入，直到数组满或用户输入非数字
+//    while (i < Max && cin >> fish[i])
+//    {
+//        if (++i < Max)  // 先将i加1，再判断是否小于Max
+//            cout << "第" << i + 1 << "条鱼: ";
+//    }
+//
+//    double total = 0.0;  // 初始化总重量
+//    // 累加所有输入的鱼重量
+//    for (int j = 0; j < i; j++)
+//        total += fish[j];
+//
+//    if (i == 0)
+//        cout << "没有输入鱼。\n";  // 处理无输入情况
+//    else
+//        cout << total / i << " 是 "
+//        << i << " 条鱼的平均重量(kg)。\n";
+//
+//    cout << "完成。\n";  // 程序结束提示
+//    cin.get();
+//    return 0;
+//} 
+
+////6.14
+//#include<iostream>
+//const int Max = 5;  // 定义最大轮数为5
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    int golf[Max];  // 声明用于存储高尔夫分数的数组
+//    cout << "请输入你的高尔夫得分。\n";
+//    cout << "你必须输入 " << Max << " 轮的分数。\n";
+//    int i;
+//
+//    // 循环读取每一轮的分数
+//    for (i = 0; i < Max; i++)
+//    {
+//        cout << "第 " << i + 1 << " 轮: ";
+//        // 输入验证循环：确保输入的是数字而非字符
+//        while (!(cin >> golf[i]))
+//        {
+//            cin.clear();  // 重置输入流的错误状态
+//            // 清除输入缓冲区中直到换行符的所有内容
+//            while (cin.get() != '\n')
+//                continue;//从键盘输入缓冲区中一个字符一个字符地读取，直到遇到回车键（换行符 \n）为止，期间不对这些字符做任何处理（即把它们“丢弃”）
+//            cout << "请输入一个数字: ";  // 提示重新输入
+//        }
+//    }
+//
+//    double total = 0.0;  // 初始化总分
+//    // 累加所有轮次的分数
+//    for (i = 0; i < Max; i++)
+//        total += golf[i];
+//
+//    // 输出平均分和轮次信息
+//    cout << total / Max << " 是 "
+//        << Max << " 轮的平均分。\n";
+//
+//    cin.get();
+//    return 0;
+//}
+
+////6.15
+//#include<iostream>  // 包含标准输入输出流库
+//#include<fstream>  // 包含文件流库，用于文件读写
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    char automobile[50];  // 定义字符数组，用于存储汽车品牌和型号
+//    int year;            // 定义整型变量，用于存储年份（注意：此处未赋值，输出会是随机值）
+//    double a_price;      // 定义双精度浮点型变量，用于存储原价
+//    double d_price;      // 定义双精度浮点型变量，用于存储现价
+//
+//    ofstream outFile;           // 定义一个文件输出流对象
+//    outFile.open("carinfo.txt"); // 打开（或创建）名为 "carinfo.txt" 的文件，准备写入数据
+//    cout << "请输入汽车的品牌和型号: ";  // 提示用户输入汽车品牌和型号
+//    cin.getline(automobile, 50);  // 读取一行输入（包含空格），存入 automobile 数组
+//    cout << "输入汽车生产年份: ";
+//    cin >> year;
+//    cout << "请输入原始报价: ";           // 提示用户输入原始报价
+//    cin >> a_price;                       // 读取用户输入的原始价格
+//    d_price = 0.913 * a_price;            // 计算现价（假设为原价的91.3%）
+//
+//    // 设置控制台输出格式
+//    cout << fixed;                     // 使用定点十进制格式（固定小数位数）
+//    cout.precision(2);                 // 设置小数点后保留2位数字
+//    cout.setf(ios_base::showpoint);    // 强制显示小数点和尾随零
+//
+//    // 在控制台输出汽车信息
+//    cout << "品牌和型号: " << automobile << endl;
+//    cout << "年份: " << year << endl;  // 注意：year 变量未被赋值，此处输出的是内存中的随机值
+//    cout << "原始报价是 $" << a_price << endl;
+//    cout << "现报价是 $" << d_price << endl;
+//
+//    // 设置文件输出格式（与控制台一致）
+//    outFile << fixed;
+//    outFile.precision(2);
+//    outFile.setf(ios_base::showpoint);
+//
+//    // 将汽车信息写入文件
+//    outFile << "品牌和型号: " << automobile << endl;
+//    outFile << "年份: " << year << endl;  // 同样，文件中也会写入随机值
+//    outFile << "原始报价是 $" << a_price << endl;
+//    outFile << "现报价是 $" << d_price << endl;
+//
+//    outFile.close();  // 关闭文件，确保数据被保存并释放资源
+//    cin.get();        // 等待用户按键，防止程序窗口立即关闭
+//    return 0;         // 程序正常结束
+//} 
+
+//2月4号
+
+//#include <iostream>  // 输入输出流库
+//#include <fstream>   // 文件流库，用于文件读写
+//#include <cstdlib>   // 标准库，提供 exit() 函数
+//
+//const int SIZE = 60;  // 定义文件名最大长度为 60
+//
+//int main()
+//{
+//    using namespace std;  // 使用标准命名空间
+//
+//    char filename[SIZE];  // 定义字符数组用于存储文件名
+//    ifstream inFile;       // 创建输入文件流对象
+//
+//    // 提示用户输入数据文件名
+//    cout << "请输入数据文件名: ";
+//    cin.getline(filename, SIZE);  // 读取一行作为文件名
+//
+//    // 尝试打开文件
+//    inFile.open(filename);
+//    if (!inFile.is_open())  // 如果文件打开失败
+//    {
+//        cout << "无法打开文件 " << filename << endl;
+//        cout << "程序即将终止。\n";
+//        exit(EXIT_FAILURE);  // 终止程序并返回失败状态
+//    }
+//
+//    double value;   // 用于存储从文件读取的数值
+//    double sum = 0.0;  // 累计和
+//    int count = 0;     // 计数器，记录成功读取的数据项数
+//
+//    // 从文件中读取第一个数值
+//    inFile >> value;
+//    while (inFile.good())  // 当文件流状态良好时循环
+//    {
+//        ++count;      // 增加计数
+//        sum += value; // 累加数值
+//        inFile >> value;  // 继续读取下一个数值
+//    }
+//
+//    // 判断循环结束的原因
+//    if (inFile.eof())
+//        cout << "已到达文件末尾。\n";  // 到达文件末尾
+//    else if (inFile.fail())
+//        cout << "输入因数据不匹配而终止。\n";  // 数据类型不匹配
+//    else
+//        cout << "输入因未知原因终止。\n";  // 未知原因
+//
+//    // 输出统计结果
+//    if (count == 0)
+//        cout << "未处理任何数据。\n";  // 没有数据被处理
+//    else
+//    {
+//        cout << "读取项数: " << count << endl;  // 读取项数
+//        cout << "总和: " << sum << endl;         // 总和
+//        cout << "平均值: " << sum / count << endl;  // 平均值
+//    }
+//
+//    inFile.close();  // 关闭文件
+//
+//    cin.get();  // 等待用户按键
+//    return 0;   // 程序正常结束
+//}
+
+////7.1
+//#include <iostream>
+//
+//void simple()// 定义简单函数
+//{
+//    using namespace std;
+//    cout << "我只是一个简单的函数。\n";
+//}
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    // 输出调用信息
+//    cout << "main() 将调用 simple() 函数：\a\n";
+//    simple();  // 调用简单函数
+//    cout << "main() 已完成对 simple() 函数的调用。\n";
+//
+//    cin.get();  // 等待用户按键
+//    return 0;   // 程序正常结束
+//}
+
+////7.2
+//#include <iostream>
+//
+//// 定义 cheers 函数，用于输出指定次数的欢呼语
+//void cheers(int);
+//
+//// 定义 cube 函数，用于计算立方值
+//double cube(double x);
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    // 调用 cheers 函数，输出 5 次欢呼语
+//    cheers(5);
+//
+//    // 提示用户输入一个数字
+//    cout << "请输入一个数字: "<<"\a";
+//
+//    // 定义变量存储用户输入的边长
+//    double side;
+//    cin >> side;
+//
+//    // 计算立方体体积
+//    double volume = cube(side);
+//
+//    // 输出结果：一个指定边长的立方体体积是多少
+//    cout << "一个边长为 " << side << " 英尺的立方体，其体积为 ";
+//    cout << volume << " 立方英尺。\n";
+//
+//    // 调用 cheers 函数，输出 cube(2) 次欢呼语
+//    cheers(cube(2));
+//
+//    // 等待用户按键，防止程序窗口立即关闭
+//    cin.get();
+//    return 0;
+//}
+//
+//// cheers 函数的实现：循环输出 "Cheers! "
+//void cheers(int n)
+//{
+//    using namespace std;
+//    for (int i = 0; i < n; i++)
+//        cout << "干杯! ";
+//    cout << endl;
+//}
+//
+//// cube 函数的实现：返回 x 的立方值
+//double cube(double x)
+//{
+//    return x * x * x;
+//}
+
+////7.3
+//#include <iostream>
+//using namespace std;
+//
+//// 函数声明：根据指定次数打印字符
+//void n_chars(char, int);
+//
+//int main()
+//{
+//    int times;  // 用于存储用户输入的次数
+//    char ch;    // 用于存储用户输入的字符
+//
+//    // 提示用户输入一个字符
+//    cout << "请输入一个字符: ";
+//    cin >> ch;
+//
+//    // 当输入的字符不是 'q' 时，循环执行
+//    while (ch != 'q')
+//    {
+//        // 提示用户输入一个整数，并发出提示音
+//        cout << "请输入一个整数: \a";
+//        cin >> times;
+//
+//        // 调用函数，打印指定次数的字符
+//        n_chars(ch, times);
+//
+//        // 提示用户输入下一个字符，或输入 'q' 退出
+//        cout << "\n请输入另一个字符，或按 q 键退出: ";
+//        cin >> ch;
+//    }
+//
+//    // 循环结束后，显示最后一次输入的次数值
+//    cout << "times 的值为 " << times << "。\n";
+//    cout << "再见\a\a\n";
+//
+//    cin.get();
+//    return 0;
+//}
+//
+//// 函数定义：打印字符 c，共 n 次
+//void n_chars(char c, int n)
+//{
+//    while (n-- > 0)//这个表达式由三部分组成： n--：这是后置递减运算符。它的特点是“先使用，后减减”。意思是：先拿 n 的当前值去参与运算，等运算结束后，n 自己再减去 1。> ：这是大于号，用于比较。0：比较的对象。
+//        cout << c;
+//}
+
+////7.4
+//#include <iostream>
+//
+//// 函数声明：计算中奖概率
+//long double probability(unsigned numbers, unsigned picks);
+//
+//int main()
+//{
+//    using namespace std;
+//    double total, choices; // total: 总选项数, choices: 允许选择的数量
+//
+//    // 提示用户输入
+//    cout << "请输入彩票卡上的总选项数，以及\n"
+//        "您允许选择的号码个数：\n";
+//
+//    // 循环读取用户输入，直到输入无效或选择数大于总选项数
+//    while (cin >> total >> choices)
+//    {
+//        if (choices <= total)
+//        {
+//            cout << "您的中奖概率为 1/";
+//            cout << probability(total, choices);
+//            cout << "。\n";
+//            cout << "请输入下一组数字 (输入q退出): ";
+//        }
+//        else
+//        {
+//            cout << "选择的号码个数不能大于总选项数，请重新输入。\n";
+//        }
+//    }
+//
+//    cout << "再见\a\n";
+//
+//    cin.get();
+//    return 0;
+//}
+//
+//// 函数定义：计算组合数 C(n, k)
+//// 用于计算从 'numbers' 个号码中选出 'picks' 个号码的组合方式总数
+//long double probability(unsigned numbers, unsigned picks)
+//{
+//    long double result = 1.0;
+//    long double n;
+//    unsigned p;
+//
+//    // 使用循环计算组合公式：n * (n-1) * ... / (p * (p-1) * ...)
+//    for (n = numbers, p = picks; p > 0; n--, p--)
+//        result = result * n / p;
+//
+//    return result;
+//}
+
+////7.5
+//#include <iostream>
+//
+//const int arsize = 8;  // 定义数组大小为 8
+//
+//// 函数声明：计算整型数组元素的总和
+//int sum_arr(int arr[], int n);
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    // 初始化饼干数量数组
+//    int cookies[arsize] = { 1, 2, 4, 8, 16, 32, 64, 128 };
+//
+//    // 调用函数计算数组总和
+//    int sum = sum_arr(cookies, arsize);
+//
+//    // 输出总共吃掉的饼干数量
+//    cout << "总共吃掉的饼干数量: " << sum << "\n";
+//
+//    cin.get();
+//    return 0;
+//}
+//
+//// 函数定义：遍历数组并累加所有元素
+//int sum_arr(int arr[], int n)
+//{
+//    int total = 0;  // 初始化总和为 0
+//
+//    // 使用 for 循环遍历数组中的每个元素
+//    for (int i = 0; i < n; i++)
+//        total = total + arr[i];  // 将当前元素加到总和中
+//
+//    return total;  // 返回计算得到的总和
+//}
+
+//2月5号
+
+////7.7 
+//#include <iostream>  // 引入标准输入输出流库
+//const int Max = 5;    // 定义数组最大容量为5
+//
+//int fill_array(double ar[], int limit);  // 声明填充数组函数
+//void show_array(const double ar[], int n);  // 声明显示数组函数
+//void revalue(double r, double ar[], int n);  // 声明重估数组值函数
+//
+//int main() {
+//    using namespace std;  // 使用标准命名空间
+//    double properties[Max];  // 定义存放财产值的数组
+//    int size = fill_array(properties, Max);  // 填充数组并获取实际大小
+//    show_array(properties, size);  // 显示数组内容
+//    if (size > 0) {  // 如果数组非空
+//        cout << "请输入重估系数: ";  // 提示用户输入重估系数
+//        double factor;  // 定义重估系数变量
+//        while (!(cin >> factor)) {  // 循环直到输入有效数字
+//            cin.clear();  // 清除输入错误标志
+//            while (cin.get() != '\n')  // 丢弃无效输入
+//                continue;
+//            cout << "输入错误；请重新输入一个数字: ";  // 提示重新输入
+//        }
+//        revalue(factor, properties, size);  // 应用重估系数
+//        show_array(properties, size);  // 再次显示数组内容
+//    }
+//    cout << "操作完成。\n";  // 提示操作完成
+//    cin.get();  // 等待用户按回车
+//    cin.get();  // 再次等待（确保窗口不立即关闭）
+//    return 0;  // 返回主函数成功状态
+//}
+//
+//int fill_array(double ar[], int limit) {
+//    using namespace std;  // 使用标准命名空间
+//    double temp;  // 临时变量用于存储输入值
+//    int i;  // 循环计数器
+//    for (i = 0; i < limit; i++) {  // 循环填充数组
+//        cout << "请输入第 " << (i + 1) << " 项的值: ";  // 提示输入
+//        cin >> temp;  // 读取用户输入
+//        if (!cin) {  // 检查输入是否有效
+//            cin.clear();  // 清除错误标志
+//            while (cin.get() != '\n')  // 丢弃无效输入
+//                continue;
+//            cout << "输入错误；输入过程已终止。\n";  // 提示输入错误
+//            break;  // 终止循环
+//        }
+//        else if (temp < 0) {  // 检查是否为负数
+//            break;  // 遇到负数终止循环
+//        }
+//        ar[i] = temp;  // 将有效值存入数组
+//    }
+//    return i;  // 返回实际填充的元素数量
+//}
+//
+//void show_array(const double ar[], int n) {
+//    using namespace std;  // 使用标准命名空间
+//    for (int i = 0; i < n; i++) {  // 遍历数组
+//        cout << "财产 #" << (i + 1) << ": $";  // 显示财产编号
+//        cout << ar[i] << endl;  // 显示财产值
+//    }
+//}
+//
+//void revalue(double r, double ar[], int n) {
+//    for (int i = 0; i < n; i++)  // 遍历数组
+//        ar[i] *= r;  // 将每个元素乘以重估系数
+//}
+
+////7.8
+//#include <iostream>  // 引入标准输入输出流库
+//const int arsize = 8;  // 定义数组大小为8
+//int sum_arr(const int* begin, const int* end);  // 声明数组求和函数
+//int main() {
+//    using namespace std;  // 使用标准命名空间
+//    int cookies[arsize] = { 1, 2, 4, 8, 16, 32, 64, 128 };  // 定义饼干数量数组
+//    int sum = sum_arr(cookies, cookies + arsize);  // 计算整个数组的和
+//    cout << "总共吃了的饼干数量: " << sum << endl;  // 输出总和
+//    sum = sum_arr(cookies, cookies + 3);  // 计算前3个元素的和
+//    cout << "前三个人吃了" << sum << "个曲奇。\n";
+//    sum = sum_arr(cookies + 4, cookies + 8);
+//    cout << "最后四个人吃了的饼干数量 " << sum << " .\n";  // 输出前3个元素的和
+//
+//    cin.get();  // 等待用户按回车
+//    return 0;  // 返回主函数成功状态
+//}
+//
+//int sum_arr(const int* begin, const int* end) {
+//    const int* pt;  // 定义指针变量用于遍历数组
+//    int total = 0;  // 初始化总和为0
+//
+//    for (pt = begin; pt != end; pt++)  // 遍历数组
+//        total = total + *pt;  // 累加当前元素值
+//    return total;  // 返回总和
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    int a = 100;          // 普通整型变量
+//    int* p1 = &a;         // 一级指针，指向 a
+//    int** p = &p1;        // 二级指针，指向 p1
+//
+//    // 输出结果
+//    printf("变量 a 的值: %d\n", a);           // 输出: 100
+//    printf("*p1 的值: %d\n", *p1);           // 输出: 100 (通过一级指针访问 a)
+//    printf("**p 的值: %d\n", **p);           // 输出: 100 (通过二级指针访问 a)
+//
+//    printf("p1 的值(即 a 的地址): %p\n", (void*)p1);
+//    printf("*p 的值(即 p1 的值): %p\n", (void*)*p); // *p 等于 p1
+//
+//    printf("p 的值(即 p1 的地址): %p\n", (void*)p);
+//    printf("&p1 的值(即 p1 的地址): %p\n", (void*)&p1); // p 等于 &p1
+//
+//    return 0;
+//}
+
+////7.9
+//#define _CRT_SECURE_NO_WARNINGS // 在包含头文件之前添加，用于禁用安全警告
+//#include <iostream>
+//
+//// 函数声明：计算字符在字符串中出现的次数
+//unsigned int c_in_str(const char* str, char ch);
+//
+//int main()
+//{
+//    using namespace std;
+//
+//    // 定义测试字符串
+//    const char mmm[15] = "minimum";     // 字符数组示例
+//    const char* wail = "ululate";       // 字符指针示例
+//
+//    // 调用函数统计字符出现次数
+//    unsigned int ms = c_in_str(mmm, 'm');  // 统计字符'm'在mmm中出现的次数
+//    unsigned int us = c_in_str(wail, 'u'); // 统计字符'u'在wail中出现的次数
+//
+//    // 输出统计结果
+//    cout << "字符串 " << mmm << " 中包含 " << ms << " 个字母 m" << endl;
+//    cout << "字符串 " << wail << " 中包含 " << us << " 个字母 u" << endl;
+//
+//    cin.get(); // 等待用户按键，防止程序窗口关闭
+//    return 0;
+//}
+//
+// * 函数功能：统计指定字符在字符串中出现的次数
+// * 参数：
+// *   str: 要搜索的字符串
+// *   ch: 要查找的字符
+// * 返回值：字符出现的次数
+// */
+//unsigned int c_in_str(const char* str, char ch)
+//{
+//    unsigned int count = 0; // 计数器，初始化为0
+//
+//    // 遍历字符串，直到遇到字符串结束符'\0'
+//    while (*str)
+//    {
+//        // 如果当前字符等于要查找的字符
+//        if (*str == ch)
+//            count++; // 计数器加1
+//        str++; // 指针移动到下一个字符
+//    }
+//    return count; // 返回统计结果
+//}
+
+////7.10
+//#include <iostream>
+//
+//// 函数声明：根据指定字符和次数构建字符串
+//char* buildstr(char c, int n);
+//
+//int main() {
+//    using namespace std;
+//
+//    int times;   // 重复次数
+//    char ch;     // 输入的字符
+//
+//    cout << "请输入一个字符: ";
+//    cin >> ch;
+//    cout << "请输入一个整数: ";
+//    cin >> times;
+//
+//    // 第一次调用：根据用户输入构建字符串
+//    char* ps = buildstr(ch, times);
+//    cout << ps << endl;
+//    delete[] ps; // 释放内存
+//
+//    // 第二次调用：构建由 '+' 组成的分隔线
+//    ps = buildstr('+', 20);
+//    cout << ps << "-操作完成-" << ps << endl;
+//    delete[] ps; // 释放内存
+//
+//    cin.get();
+//    return 0;
+//}
+// * 函数功能：创建一个由字符 c 重复 n 次组成的字符串
+// * 参数：
+// *   c: 要重复的字符
+// *   n: 重复的次数
+// * 返回值：指向新创建字符串的指针
+//char* buildstr(char c, int n) {
+//    // 动态分配内存 (n个字符 + 1个结束符'\0')
+//    char* pstr = new char[n + 1];
+//
+//    // 在字符串末尾添加结束符
+//    pstr[n] = '\0';
+//
+//    // 从后往前填充字符 (修正：return 已移出循环)
+//    while (n-- > 0) {
+//        pstr[n] = c; 
+//        // 注意：这里不再 return，让循环完整执行
+//    }
+//
+//    // 循环结束后再返回指针
+//    return pstr;
+//}
+
+////7.11(计算时间总和)
+//#include <iostream>  // 引入标准输入输出流库
+//
+//// 定义行程时间结构体
+//struct travel_time {
+//    int hours; // 小时成员变量
+//    int mins;  // 分钟成员变量
+//};
+//
+//const int Mins_per_hr = 60; // 定义每小时的分钟数常量
+//
+//// 函数声明：计算两个时间的总和
+//travel_time sum(travel_time t1, travel_time t2);
+//// 函数声明：显示时间格式
+//void show_time(travel_time t);
+//
+//int main() {
+//    using namespace std;  // 使用标准命名空间
+//
+//    // 初始化前两天的行程时间
+//    travel_time day1 = { 5, 45 };  // 创建第一天行程对象，5小时45分
+//    travel_time day2 = { 4, 55 };  // 创建第二天行程对象，4小时55分
+//
+//    // 计算前两天的总行程时间
+//    travel_time trip = sum(day1, day2);  // 调用sum函数计算总和
+//    cout << "前两天行程总计: ";  // 输出提示信息
+//    show_time(trip);  // 调用显示函数输出结果
+//
+//    // 添加第三天的行程时间
+//    travel_time day3 = { 4, 32 };  // 创建第三天行程对象，4小时32分
+//    cout << "前三天行程总计: ";  // 输出提示信息
+//    show_time(sum(trip, day3));  // 计算并显示三天总和
+//
+//    cin.get();  // 等待用户输入，防止程序窗口关闭
+//    return 0;  // 返回主函数成功状态
+//}
+//
+//// 函数定义：计算两个行程时间的总和
+//travel_time sum(travel_time t1, travel_time t2) {
+//    travel_time total; // 用于存储总时间的结构体变量
+//
+//    // 计算总分钟数（取余数，处理超过60分钟的情况）
+//    total.mins = (t1.mins + t2.mins) % Mins_per_hr;
+//
+//    // 计算总小时数（包括分钟数进位的小时）
+//    total.hours = t1.hours + t2.hours + (t1.mins + t2.mins) / Mins_per_hr;
+//
+//    return total;  // 返回计算得到的总时间
+//}
+//
+//// 函数定义：显示时间，格式为 "X 小时, Y 分钟"
+//void show_time(travel_time t) {
+//    using namespace std;  // 使用标准命名空间
+//    cout << t.hours << " 小时, "  // 输出小时数
+//        << t.mins << " 分钟\n";  // 输出分钟数并换行
+//}
+
+//2月15
+
+//7.12
+//#include <iostream>  // 引入输入输出流库
+//#include <cmath>     // 引入数学函数库
+//
+//// 定义极坐标结构体
+//struct jizuo {
+//    double distance;  // 距离
+//    double angle;     // 角度（弧度）
+//};
+//
+//// 定义直角坐标结构体
+//struct zhijiao {
+//    double x;  // x坐标
+//    double y;  // y坐标
+//};
+//
+//// 将直角坐标转换为极坐标
+//jizuo zhijiao_to_jizuo(zhijiao xypos);
+//
+//// 显示极坐标信息
+//void show_jizuo(jizuo dapos);
+//
+//int main() {
+//    using namespace std;
+//    zhijiao rplace;  // 声明直角坐标变量
+//    jizuo pplace;    // 声明极坐标变量
+//
+//    cout << "请输入 x 和 y 值: ";  // 提示用户输入
+//    while (cin >> rplace.x >> rplace.y) {  // 循环读取用户输入
+//        pplace = zhijiao_to_jizuo(rplace);  // 转换为极坐标
+//        show_jizuo(pplace);  // 显示转换结果
+//        cout << "请输入下一对数值（输入 q 退出）: ";  // 提示继续输入
+//    }
+//    cout << "程序结束。\n";  // 结束提示
+//
+//    cin.get();  // 等待用户按键
+//    return 0;   // 返回0表示程序正常结束
+//}
+//
+//// 将直角坐标转换为极坐标
+//jizuo zhijiao_to_jizuo(zhijiao xypos) {
+//    using namespace std;
+//    jizuo answer;
+//
+//    // 计算距离
+//    answer.distance = sqrt(xypos.x * xypos.x + xypos.y * xypos.y);//勾股定理，开平方根。
+//    // 计算角度（弧度）
+//    answer.angle = atan2(xypos.y, xypos.x);
+//    return answer;  // 返回计算结果
+//}
+//
+//// 显示极坐标信息
+//void show_jizuo(jizuo dapos) {
+//    using namespace std;
+//    const double Rad_to_deg = 57.29577951;  // 弧度转角度常数
+//
+//    cout << "距离 = " << dapos.distance;  // 输出距离
+//    cout << "，角度 = " << dapos.angle * Rad_to_deg;  // 输出角度（转换为度）
+//    cout << " 度\n";  // 添加单位并换行
+//}                                                                                                                                                                                                                                                                    
+
+//7.14
+//#include <iostream>  // 引入输入输出流库
+//#include <string>    // 引入字符串处理库
+//using namespace std;  // 使用标准命名空间
+//
+//const int SIZE = 5;  // 定义常量SIZE为5，表示要输入的天文景观数量
+//
+//// 声明显示函数，用于输出喜欢的数字列表
+//void display(const string sa[], int n);
+//
+//int main() {
+//    string list[SIZE];  // 定义一个字符串数组，用于存储用户输入的喜欢的数字
+//
+//    // 提示用户输入5个最喜欢的数字
+//    cout << "请输入您最喜欢的" << SIZE << "个数字：\a\n";
+//    for (int i = 0; i < SIZE; i++) {  // 循环5次，每次获取一个输入
+//        cout << i + 1 << ": ";  // 显示当前输入序号
+//        getline(cin, list[i]);  // 读取用户输入的字符串
+//    }
+//
+//    // 提示用户已输入完毕，准备显示列表
+//    cout << "您的列表：\a\n";
+//    display(list, SIZE);  // 调用显示函数，输出喜欢的数字列表
+//
+//    return 0;  // 程序正常结束
+//}
+//
+//// 显示函数的实现：输出喜欢的数字列表
+//void display(const string sa[], int n) {
+//    for (int i = 0; i < n; i++) {  // 遍历数组中的每个元素
+//        cout << i + 1 << ": " << sa[i] << endl;  // 输出序号和对应的数字
+//    }
+//}
+
+//7.15
+//#include <iostream>  // 引入输入输出流库
+//#include <array>     // 引入数组库
+//#include <string>    // 引入字符串库
+//
+//const int Seasons = 4;  // 定义常量Seasons为4，表示四季
+//using namespace std;
+//
+//// 定义季节名称数组，包含"春季"、"夏季"、"秋季"、"冬季"
+//const std::array<std::string, Seasons> SeasonNames = { "春季", "夏季", "秋季", "冬季" };
+//
+//// 声明填充函数，用于输入每个季节的开销
+//void fill(std::array<double, Seasons>* expenses);
+//// 声明显示函数，用于显示每个季节的开销和总开销
+//void show(std::array<double, Seasons> expenses);
+//
+//int main() {
+//    std::array<double, Seasons> seasonExpenses;  // 定义一个数组，用于存储四季的开销
+//    fill(&seasonExpenses);  // 调用填充函数，输入每个季节的开销
+//    show(seasonExpenses);   // 调用显示函数，输出每个季节的开销和总开销
+//
+//    std::cin.get();  // 等待用户按键
+//    return 0;         // 程序正常结束
+//}
+//
+//// 填充函数的实现：输入每个季节的开销
+//void fill(std::array<double, Seasons>* expenses) {
+//    using namespace std;
+//    for (int i = 0; i < Seasons; i++) {  // 循环4次，对应四季
+//        cout << "请输入" << SeasonNames[i] << "的开销: ";  // 提示用户输入当前季节的开销
+//        cin >> (*expenses)[i];  // 读取用户输入的开销值
+//    }
+//}
+//
+//// 显示函数的实现：显示每个季节的开销和总开销
+//void show(std::array<double, Seasons> expenses) {
+//    using namespace std;
+//    double total = 0.0;  // 初始化总开销为0
+//    cout << "\n开销明细\n";  // 输出标题
+//    for (int i = 0; i < Seasons; i++) {  // 遍历四季
+//        cout << SeasonNames[i] << ": ￥" << expenses[i] << endl;  // 输出当前季节的开销
+//        total += expenses[i];  // 累加到总开销
+//    }
+//    cout << "总开销: ￥" << total << endl;  // 输出总开销
+//}
